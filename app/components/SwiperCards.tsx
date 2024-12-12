@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules'
 import {Swiper , SwiperSlide} from "swiper/react"
 import type SwiperType from "swiper" 
 
-const SwiperCards = ({items , paginationImages , className=""} : {items: {src : string , card : ReactNode }[] , paginationImages:boolean , className?: string})  => {
+const SwiperCards = ({items , paginationImages , className="" , slidesPerView = 1 } : {items: {src : string , card : any  }[] , paginationImages:boolean , className?: string , slidesPerView?:number})  => {
     const [swiper , setSwiper] = useState<SwiperType | null>()
     const [progress , setProgress] = useState(0)
 
@@ -30,11 +30,11 @@ const SwiperCards = ({items , paginationImages , className=""} : {items: {src : 
             <Swiper
                 modules={[Autoplay]}
                 autoplay={{delay:3000}}
-                spaceBetween={50}
-                slidesPerView={1}
-                onSlideChange={()=>{console.log("change");}}
+                spaceBetween={20}
+                slidesPerView={slidesPerView}
+                onSlideChange={()=>{}}
                 onSwiper={(swiper)=>{setSwiper(swiper);}}
-                className= {` w-full ${className} h-96`}
+                className= {` w-full h-96 ${className}`}
             >
                 {items.map( ( {card} , idx) => {return(
                     <SwiperSlide key={idx}>{card}</SwiperSlide>
