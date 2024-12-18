@@ -8,6 +8,8 @@ const page = async () => {
     const data = await fetch(`${APIURL}genres?key=${KEY}`).then((res) => {
         return res.json();
     });
+    console.log(data.results);
+    
     const genres = data.results.slice(0 , 15) ;
     console.log(genres);
     

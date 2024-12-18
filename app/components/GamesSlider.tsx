@@ -4,13 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AddToWishList from './AddToWishList'
 
-const GamesSlider = ({games , title , slidesPerView=4, } : {games : any[] , title : string , slidesPerView?:number}) => {
+const GamesSlider = ({games , title , slidesPerView=4, mobile=false , className=""} : { className ?: string ,mobile?:boolean, games : any[] , title : string , slidesPerView?:number}) => {
     
   return (
     <div>
         <div className='mt-14 h-full flex flex-col gap-6'>
             <h1 className='text-white text-2xl lg:text-4xl'> {title}</h1>
-            <SwiperCards className='h-full' slidesPerView={slidesPerView} paginationImages={false} items={
+            <SwiperCards className='h-full' slidesPerView={mobile ? 2 : slidesPerView} paginationImages={false} items={
             games.map((game : any)=> {
                 return ({
                 card : (

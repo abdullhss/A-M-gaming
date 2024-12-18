@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import { getGamesByIds, searchGames } from '../api/api'
 import GamesSlider from '../components/GamesSlider';
 
 export default async function Home() {
+
+  
   // random games 
   const {data} = await searchGames("" , 3 , [] , 9) ;
   const games = data.results ;
@@ -23,10 +25,10 @@ export default async function Home() {
   return (
     <main>
       <Hero/>
-      <GamesSlider games={games} title='Top Games'/>
-      <GamesSlider games={ps5.data.results} title='Top PS5 Games'/>
-      <GamesSlider slidesPerView={2} games={selectedGames.map((game)=>game.data)} title='Playstation Exclusives'/>
-      <GamesSlider games={pc.data.results} title='Top PC Games'/>
+      <GamesSlider games={games} slidesPerView={3} title='Top Games' />
+      <GamesSlider games={ps5.data.results} slidesPerView={2} title='Top PS5 Games'/>
+      <GamesSlider slidesPerView={3} games={selectedGames.map((game)=>game.data)} title='Playstation Exclusives'/>
+      <GamesSlider games={pc.data.results} slidesPerView={2} title='Top PC Games'/>
       
     </main>
   )
