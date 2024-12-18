@@ -5,12 +5,11 @@ import Image from "next/image";
 import React from "react";
 
 const page = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+  const { id } = await params;
   const game = await getGame(id);
   console.log(game);
   const { screenshots, data, similar }: { screenshots: any[]; data: any; similar: any[] } = game;
   console.log(data.ratings);
-
   return (
     <div className=" mt-10">
       <div>
@@ -36,8 +35,9 @@ const page = async ({ params }: { params: { id: string } }) => {
           />
           <p className=" mt-10 col-span-2">{data.description_raw}</p>
         </div>
-      </div>
+      </div>{" "}
       <GamesSlider title="Similar Games" games={similar.results} />
+      
     </div>
   );
 };
