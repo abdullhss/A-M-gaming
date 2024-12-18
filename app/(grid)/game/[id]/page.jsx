@@ -4,11 +4,11 @@ import SwiperCards from "@/app/components/SwiperCards";
 import Image from "next/image";
 import React from "react";
 
-const page = async ({ params }: { params: { id: string } }) => {
+const page = async ({ params }) => {
   const { id } = params;
   const game = await getGame(id);
   console.log(game);
-  const { screenshots, data, similar }: { screenshots: any[]; data: any; similar: any[] } = game;
+  const { screenshots, data, similar }= game;
   console.log(data.ratings);
   return (
     <div className=" mt-10">
