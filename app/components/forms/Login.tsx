@@ -42,7 +42,7 @@ const Login = () => {
 
   return (
     <MotionItem animate={{opacity : 1 , y : 0 }} initial={{opacity:0 , y:50 }} >
-        <MaxWidthWrapper coustmePadding="py-14" className='bg-black/60 rounded-2xl border border-input flex flex-col items-center w-full'>
+        <MaxWidthWrapper customPadding="py-14" className='bg-black/60 rounded-2xl border border-input flex flex-col items-center w-full'>
         <Logo/>
             <Form {...form}>
                 <form  onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col w-full gap-8">
