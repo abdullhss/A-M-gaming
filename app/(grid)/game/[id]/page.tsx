@@ -4,7 +4,7 @@ import SwiperCards from "@/app/components/SwiperCards";
 import Image from "next/image";
 import React from "react";
 
-const page = async ({ params }: { params: { id: string } }) => {
+const page = async ({ params }: { params: { id: any } }) => {
   const { id } = await params;
   const game = await getGame(id);
   console.log(game);
