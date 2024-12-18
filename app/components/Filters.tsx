@@ -5,14 +5,18 @@ import { useGetGames } from '@/lib/QueryFonctions';
 import GameSkeleton from './GameSkeleton';
 import GameCard from './GameCard';
 import Empty from './Empty';
+import { PaginationCustom } from './PaginationCustom';
 
 const Filters = ({genres} : {genres : any}) => {
     
+    const [page , setPage] = useState(1) ; 
+
     const [activeGenres , setActiveGenres] = useState<number []>([]) ;
     const {games, isLoading} = useGetGames({
-        filters : [{filterName : 'genres' , option:activeGenres?.join(',') }]
+        page , 
+        filters : activeGenres.length > 0 ? [{filterName : 'genres' , option:activeGenres?.join(',') }] : []
     });
-    console.log(games);
+    const totalPages = Math.ceil(games?.data.count % 12)
   return (
     <GridContainer cols={11} className='gap-5 relative'>
         <div className='lg:sticky top-4 lg:h-screen col-span-full lg:col-span-2 '>
@@ -44,6 +48,8 @@ const Filters = ({genres} : {genres : any}) => {
 
             }
         </GridContainer>
+
+        <PaginationCustom page={page} setPage={setPage} count={totalPages}/>
     </GridContainer>
   )
 }
