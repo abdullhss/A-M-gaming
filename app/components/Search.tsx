@@ -53,10 +53,8 @@ const Search = () => {
       <AnimatePresence>
         {(games?.data || isLoading) && (
           <MotionItem
-            nohover
             initial={{ height: 0 }}
             animate={{ height: 'auto' }}
-            axit={{ opacity: 0 }}
             className="absolute w-full top-full z-50 bg-[#222425] rounded-xl shadow-sm max-h-[40vh] overflow-y-scroll left-0"
           >
             {isLoading ? (
