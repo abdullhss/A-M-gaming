@@ -4,12 +4,13 @@ import SwiperCards from "@/app/components/SwiperCards";
 import Image from "next/image";
 import React from "react";
 
-const page = async ({ params }: { params: { id: any } }) => {
-  const { id } = await params;
+const page = async ({ params }: { params: { id: string } }) => {
+  const { id } = params;
   const game = await getGame(id);
   console.log(game);
   const { screenshots, data, similar }: { screenshots: any[]; data: any; similar: any[] } = game;
   console.log(data.ratings);
+
   return (
     <div className=" mt-10">
       <div>
@@ -35,21 +36,8 @@ const page = async ({ params }: { params: { id: any } }) => {
           />
           <p className=" mt-10 col-span-2">{data.description_raw}</p>
         </div>
-      </div>{" "}
+      </div>
       <GamesSlider title="Similar Games" games={similar.results} />
-      {/* <div>
-        {data.ratings.map(({ title, count, percent, id }) => (
-          <div key={id} className="flex items-center gap-2 mb-4">
-            {imageSrc && <img src={imageSrc} alt={title} className="w-8 h-8" />}
-            <div>
-              <h3 className="font-semibold text-lg">{title}</h3>
-              <p>
-                {count} reviews - {percent}%
-              </p>
-            </div>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
