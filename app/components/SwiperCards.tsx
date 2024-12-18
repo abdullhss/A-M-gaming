@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import type SwiperType from "swiper"
 
 interface Item {
-  src: string;
-  card: React.ReactNode; // تحديد نوع الـ card يكون أكثر دقة من any
+  src ?: string;
+  card: any;
 }
 
 interface SwiperCardsProps {
@@ -68,7 +68,7 @@ const SwiperCards = ({ items, paginationImages, className = "", slidesPerView = 
                   className='duration-150 absolute w-0 h-full bg-gray-600 opacity-50 z-10'
                 ></div>
               )}
-              <Image alt={"image-pagination"} src={src} fill className='object-cover' />
+              <Image alt={"image-pagination"} src={src || ""} fill className='object-cover' />
             </div>
           ))}
       </div>
