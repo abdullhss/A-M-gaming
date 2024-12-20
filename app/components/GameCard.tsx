@@ -15,10 +15,10 @@ const GameCard = ({game , wishlist} : {game : any , wishlist? :boolean}) => {
             <HoverCardTrigger className='relative w-full opacity-85 cursor-pointer'>
                 <div>
                     <div className='relative flex flex-col gap-2'>
-                        <Link href={`/games/${game.id}`} className='w-full overflow-hidden h-64 relative rounded-xl'>
+                        <Link href={`/game/${game.id}`} className='w-full overflow-hidden h-64 relative rounded-xl'>
                             <Image className="object-cover" src={game.background_image} alt={game.name} fill />
                         </Link>
-                        <Link href={`/games/${game.id}`} className='text-sm line-clamp-1 font-semibold text-white'>
+                        <Link href={`/game/${game.id}`} className='text-sm line-clamp-1 font-semibold text-white'>
                             {game.name}
                         </Link>
                         <div className='mt-2 flex items-center gap-1'>

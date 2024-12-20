@@ -1,3 +1,4 @@
+"use client"
 import { Input } from '@/components/ui/input'
 import { useGetGames } from '@/lib/QueryFonctions'
 import { AnimatePresence } from 'framer-motion'
@@ -11,7 +12,7 @@ import Image from 'next/image'
 const Search = () => {
   const [query, setQuery] = useState('')
   const [search, setSearch] = useState('')
-  const { games, isLoading } = useGetGames({ query: search, isDisabled: search === '' })
+  const { games, isLoading } = useGetGames({ query: search, isDisabled: search == '' })
 
   const outSideRef = useRef<HTMLDivElement | null>(null)
 
@@ -26,6 +27,7 @@ const Search = () => {
 
     return () => window.removeEventListener('click', handleClickOutside)
   }, [])
+  
 
   useEffect(() => {
     const time = setTimeout(() => {
@@ -51,13 +53,14 @@ const Search = () => {
         />
       </div>
       <AnimatePresence>
-        {(games?.data || isLoading) && (
+        {console.log(games?.data)}
+        {( games?.data || isLoading) && (
           <MotionItem
             initial={{ height: 0 }}
             animate={{ height: 'auto' }}
             className="absolute w-full top-full z-50 bg-[#222425] rounded-xl shadow-sm max-h-[40vh] overflow-y-scroll left-0"
           >
-            {isLoading ? (
+            { isLoading ? (
               Array.from({ length: 5 }).map((_, i) => (
                 <div key={i} className="space-y-2 flex items-start gap-2 px-4 py-2">
                   <Skeleton className="h-20 rounded-2xl w-[40%]" />

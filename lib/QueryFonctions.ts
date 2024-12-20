@@ -18,7 +18,7 @@ export const useGetGamesWithId = (ids : string[]) => {
     });
     return {games, isLoading} ;
 }
-export const useGetGames = ({query ="", page=1 , pageSize=12 , filters=[] , isDisabled=false} : 
+export const useGetGames = ({query ="", page , pageSize=12 , filters=[] , isDisabled=false} : 
     {   
         query ?: string ,
         page?:number ,

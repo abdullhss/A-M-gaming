@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -7,6 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function PaginationCustom({
   page,
@@ -45,17 +47,28 @@ export function PaginationCustom({
   };
 
   return (
-    <Pagination className="col-span-full">
-      <PaginationContent>
+    <Pagination className="z-10 col-span-full">
+      <PaginationContent className="flex items-center gap-3">
         <PaginationItem>
           <PaginationPrevious href="#" onClick={handlePrev} />
         </PaginationItem>
 
         <PaginationItem>
-          <PaginationLink onClick={() => setPage(1)} className={ `${page === 1 ? "bg-rose-400" : "" }` } >
+          <Button
+            disabled={page==1}
+            className={`${page === count ? "bg-rose-400" : ""} flex items-center gap-2`}
+            onClick={handlePrev}
+          >
+            <ArrowLeft className="mr-1"/> prev
+          </Button>
+        </PaginationItem>
+
+        <PaginationItem className={`${page === count ? " bg-rose-400" : ""}`}>
+          <PaginationLink onClick={() => setPage(1)} className={`${page === 1 ? " bg-rose-400" : ""}`}>
             1
           </PaginationLink>
         </PaginationItem>
+
 
         {page > 3 && (
           <PaginationItem>
@@ -65,7 +78,12 @@ export function PaginationCustom({
 
         {getVisiblePages().map((p) => (
           <PaginationItem key={p}>
-            <PaginationLink onClick={() => setPage(p)}>{p}</PaginationLink>
+            <PaginationLink 
+              onClick={() => setPage(p)}
+              className={`${page === p ? " bg-rose-400" : ""}`}
+              > 
+                {p}
+            </PaginationLink>
           </PaginationItem>
         ))}
 
@@ -75,15 +93,24 @@ export function PaginationCustom({
           </PaginationItem>
         )}
 
-        <PaginationItem>
-        <PaginationLink onClick={() => setPage(count)} className={ `${page === count ? "bg-rose-400" : "" }` } >
-          {count}
-          </PaginationLink>
-        </PaginationItem>
+        {count > 1 && page < count && (
+          <PaginationItem className={`${page === count ? " bg-rose-400" : ""}`}>
+            <PaginationLink onClick={() => setPage(count)} className={`${page === count ? " bg-rose-400" : ""}`}>
+              {count}
+            </PaginationLink>
+          </PaginationItem>
+        )}
 
         <PaginationItem>
-          <PaginationNext href="#" onClick={handleNext} />
+          <Button
+            disabled={page === count}
+            className={`${page === count ? " bg-rose-400" : ""} flex items-center gap-2`}
+            onClick={handleNext}
+          >
+            Next <ArrowRight className="mr-1" />
+          </Button>
         </PaginationItem>
+
       </PaginationContent>
     </Pagination>
   );
