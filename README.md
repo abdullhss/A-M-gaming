@@ -13,19 +13,15 @@ Welcome to the **AM Gaming** repository! 🎮 Dive into the details of our gamin
 
 ## 🌟 Technologies Used
 
-Below is a list of the technologies and libraries used in this project, along with their logos:
+Below is a list of the technologies and libraries used in this project, along with their colored logos:
 
 | Technology        | Description                                  | Logo                                                                 |
 |--------------------|----------------------------------------------|----------------------------------------------------------------------|
-| **TypeScript**    | Typed JavaScript at any scale.               | ![TypeScript](https://static.cdnlogo.com/logos/t/96/typescript.svg) |
-| **Next.js**       | The React framework for production.          | ![Next.js](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg)      |
-| **React**         | A JavaScript library for building UIs.       | ![React](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg)           |
-| **TanStack Query**| Powerful asynchronous state management.      | ![TanStack](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg)    |
-| **Framer Motion** | A production-ready animation library.        | ![Framer Motion](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg) |
-| **MongoDB**       | A document-based, distributed database.      | ![MongoDB](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mongodb.svg)        |
-| **Tailwind CSS**  | A utility-first CSS framework.               | ![Tailwind CSS](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg) |
-| **Zod**           | TypeScript-first schema validation.          | ![Zod](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg)         |
-| **shadcn/ui**     | Beautiful components built with Radix UI.    | ![shadcn](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg)      |
+| **TypeScript**    | Typed JavaScript at any scale.               | ![TypeScript](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg?color=3178C6) |
+| **Next.js**       | The React framework for production.          | ![Next.js](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg?color=000000)      |
+| **React**         | A JavaScript library for building UIs.       | ![React](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg?color=61DAFB)           |
+| **MongoDB**       | A document-based, distributed database.      | ![MongoDB](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mongodb.svg?color=47A248)        |
+| **Tailwind CSS**  | A utility-first CSS framework.               | ![Tailwind CSS](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg?color=06B6D4) |
 
 ---
 
