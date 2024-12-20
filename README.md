@@ -11,6 +11,17 @@ Welcome to the **AM Gaming** repository! 🎮 Dive into the details of our gamin
 
 ---
 
+## 📸 Screenshots
+
+Here are some snapshots of the website:
+
+![Homepage Screenshot](./public/Macbook-Air-a-m-gaming.vercel.app.png)
+*The homepage of AM Gaming.*
+
+![signup Screenshot](./public/iPad-PRO-11-a-m-gaming.vercel.app.png)
+*The signup page.*
+
+---
 ## 🌟 Technologies Used
 
 Below is a list of the technologies and libraries used in this project, along with their colored logos:
@@ -25,17 +36,6 @@ Below is a list of the technologies and libraries used in this project, along wi
 
 ---
 
-## 📸 Screenshots
-
-Here are some snapshots of the website:
-
-![Homepage Screenshot](./public/Macbook-Air-a-m-gaming.vercel.app.png)
-*The homepage of AM Gaming.*
-
-![signup Screenshot](./public/iPad-PRO-11-a-m-gaming.vercel.app.png)
-*The signup page.*
-
----
 
 ## 📂 Project Setup
 
