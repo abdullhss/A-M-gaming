@@ -17,7 +17,7 @@ Below is a list of the technologies and libraries used in this project, along wi
 
 | Technology        | Description                                  | Logo                                                                 |
 |--------------------|----------------------------------------------|----------------------------------------------------------------------|
-| **TypeScript**    | Typed JavaScript at any scale.               | ![TypeScript](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg) |
+| **TypeScript**    | Typed JavaScript at any scale.               | ![TypeScript](https://static.cdnlogo.com/logos/t/96/typescript.svg) |
 | **Next.js**       | The React framework for production.          | ![Next.js](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/nextdotjs.svg)      |
 | **React**         | A JavaScript library for building UIs.       | ![React](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg)           |
 | **TanStack Query**| Powerful asynchronous state management.      | ![TanStack](https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg)    |
